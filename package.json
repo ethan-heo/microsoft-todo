@@ -1,0 +1,14 @@
+{
+    "name": "clone-microsoft-todo",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "dev": "parcel -p 3000 watch ./src/index.html"
+    },
+    "devDependencies": {
+        "parcel": "^1.12.4",
+        "parcel-bundler": "^1.12.4",
+        "sass": "^1.26.10"
+    }
+}
