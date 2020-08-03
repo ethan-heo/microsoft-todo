@@ -3,6 +3,8 @@
     &:after {
         opacity: 0;
         transition: opacity 0.12s ease;
+        z-index: 100;
+        box-shadow: 2px 2px 5px 0 rgba(178, 178, 178, 0.2);
     }
 
     &:hover {
