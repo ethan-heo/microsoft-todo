@@ -63,10 +63,14 @@ $height: 48px;
     .header__search__search-btn {
         top: 0;
         left: 0;
+
+        @include tooltip("left", "검색", 40px);
     }
     .header__search__cancel-btn {
         top: 0;
         right: 0;
+
+        @include tooltip("bottom", "검색 종료", 80px);
     }
 
     .header__search__input {

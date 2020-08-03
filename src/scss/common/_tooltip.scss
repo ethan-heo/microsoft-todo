@@ -1,0 +1,74 @@
+@mixin tooltip($direction, $message: "", $width: 120px) {
+    &:before,
+    &:after {
+        opacity: 0;
+        transition: opacity 0.12s ease;
+    }
+
+    &:hover {
+        &:before {
+            content: "";
+            position: absolute;
+            opacity: 1;
+            background-color: #fff;
+            width: 16px;
+            height: 16px;
+
+            @if $direction == "top" {
+                bottom: 117%;
+                left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+                border-bottom: 1px solid #eaeaea;
+                border-right: 1px solid #eaeaea;
+            } @else if $direction == "bottom" {
+                top: 117%;
+                left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+                border-top: 1px solid #eaeaea;
+                border-left: 1px solid #eaeaea;
+            } @else if $direction == "right" {
+                top: 50%;
+                left: 117%;
+                transform: translateY(-50%) rotate(45deg);
+                border-bottom: 1px solid #eaeaea;
+                border-left: 1px solid #eaeaea;
+            } @else {
+                top: 50%;
+                right: 117%;
+                transform: translateY(-50%) rotate(45deg);
+                border-top: 1px solid #eaeaea;
+                border-right: 1px solid #eaeaea;
+            }
+        }
+
+        &:after {
+            content: $message;
+            opacity: 1;
+            position: absolute;
+            width: $width;
+            height: 36px;
+            padding: 9px 7px;
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+            box-sizing: border-box;
+
+            @if $direction == "top" {
+                bottom: 140%;
+                left: 50%;
+                transform: translateX(-50%);
+            } @else if $direction == "bottom" {
+                top: 140%;
+                left: 50%;
+                transform: translateX(-50%);
+            } @else if $direction == "right" {
+                top: 50%;
+                left: 140%;
+                transform: translateY(-50%);
+            } @else {
+                top: 50%;
+                right: 140%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

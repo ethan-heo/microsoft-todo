@@ -78,7 +78,6 @@
 .navigation__add-list {
     width: 290px;
     transition: width 0.12s ease;
-    overflow: hidden;
 
     @media screen and (min-width: $mobile) {
         width: 50px;
@@ -88,6 +87,7 @@
 .navigation__content {
     padding-top: 60px;
     margin-bottom: 36px;
+    overflow: hidden;
 
     .navigation__content__list {
         width: 290px;
@@ -114,6 +114,8 @@
 }
 
 .navigation__add-list {
+    overflow: hidden;
+
     .navigation__add-list__inner {
         position: relative;
         width: 290px;
@@ -154,6 +156,7 @@
             }
             &:last-child {
                 right: 11px;
+                @include tooltip("left", "그룹 만들기");
             }
         }
     }
