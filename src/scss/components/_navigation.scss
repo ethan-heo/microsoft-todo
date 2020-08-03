@@ -38,17 +38,38 @@
     display: none;
 }
 
-#navigation__toggle-input:checked + .navigation {
+#navigation__toggle-input:checked ~ .navigation {
     & .navigation__content,
     & .navigation__add-list {
         width: 50px;
+
+        @media screen and (min-width: $mobile) {
+            width: 290px;
+        }
     }
 
     & .navigation__context {
         width: 50px;
+
         .navigation__context__list__item {
             width: 100%;
         }
+
+        @media screen and (min-width: $mobile) {
+            width: 290px;
+
+            .navigation__context__list__item {
+                width: calc(100% / 5);
+            }
+        }
+    }
+}
+
+#navigation__toggle-input:checked ~ .navigation__backdrop {
+    display: none;
+
+    @media screen and (min-width: $mobile) {
+        display: none;
     }
 }
 
@@ -58,6 +79,10 @@
     width: 290px;
     transition: width 0.12s ease;
     overflow: hidden;
+
+    @media screen and (min-width: $mobile) {
+        width: 50px;
+    }
 }
 
 .navigation__content {
@@ -138,6 +163,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    background-color: #f4f4f4;
 
     .navigation__context__list {
         display: flex;
@@ -154,5 +180,23 @@
         &:hover {
             background-color: #fafafa;
         }
+
+        @media screen and (min-width: $mobile) {
+            width: 100%;
+        }
+    }
+}
+
+.navigation__backdrop {
+    position: fixed;
+    display: block;
+    top: 51px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 51px);
+    background-color: rgba(178, 178, 178, 0.3);
+
+    @media screen and (min-width: $mobile) {
+        display: none;
     }
 }

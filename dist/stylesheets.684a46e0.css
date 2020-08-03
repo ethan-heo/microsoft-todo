@@ -274,14 +274,36 @@ input {
   display: none;
 }
 
-#navigation__toggle-input:checked + .navigation .navigation__content, #navigation__toggle-input:checked + .navigation .navigation__add-list {
+#navigation__toggle-input:checked ~ .navigation .navigation__content, #navigation__toggle-input:checked ~ .navigation .navigation__add-list {
   width: 50px;
 }
-#navigation__toggle-input:checked + .navigation .navigation__context {
+@media screen and (min-width: 767px) {
+  #navigation__toggle-input:checked ~ .navigation .navigation__content, #navigation__toggle-input:checked ~ .navigation .navigation__add-list {
+    width: 290px;
+  }
+}
+#navigation__toggle-input:checked ~ .navigation .navigation__context {
   width: 50px;
 }
-#navigation__toggle-input:checked + .navigation .navigation__context .navigation__context__list__item {
+#navigation__toggle-input:checked ~ .navigation .navigation__context .navigation__context__list__item {
   width: 100%;
+}
+@media screen and (min-width: 767px) {
+  #navigation__toggle-input:checked ~ .navigation .navigation__context {
+    width: 290px;
+  }
+  #navigation__toggle-input:checked ~ .navigation .navigation__context .navigation__context__list__item {
+    width: calc(100% / 5);
+  }
+}
+
+#navigation__toggle-input:checked ~ .navigation__backdrop {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  #navigation__toggle-input:checked ~ .navigation__backdrop {
+    display: none;
+  }
 }
 
 .navigation__content,
@@ -290,6 +312,13 @@ input {
   width: 290px;
   transition: width 0.12s ease;
   overflow: hidden;
+}
+@media screen and (min-width: 767px) {
+  .navigation__content,
+.navigation__context,
+.navigation__add-list {
+    width: 50px;
+  }
 }
 
 .navigation__content {
@@ -359,6 +388,7 @@ input {
   position: absolute;
   left: 0;
   bottom: 0;
+  background-color: #f4f4f4;
 }
 .navigation__context .navigation__context__list {
   display: flex;
@@ -374,6 +404,26 @@ input {
 }
 .navigation__context .navigation__context__list__item:hover {
   background-color: #fafafa;
+}
+@media screen and (min-width: 767px) {
+  .navigation__context .navigation__context__list__item {
+    width: 100%;
+  }
+}
+
+.navigation__backdrop {
+  position: fixed;
+  display: block;
+  top: 51px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 51px);
+  background-color: rgba(178, 178, 178, 0.3);
+}
+@media screen and (min-width: 767px) {
+  .navigation__backdrop {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=/stylesheets.684a46e0.css.map */
