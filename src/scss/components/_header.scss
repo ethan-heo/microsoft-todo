@@ -71,8 +71,10 @@ $height: 48px;
 
     .header__search__input {
         width: 100%;
+        padding-left: 40px;
         height: $search-height;
         border-radius: 2px;
+        box-sizing: border-box;
     }
 
     @media screen and (min-width: $mobile) {

@@ -9,7 +9,7 @@
     <body>
         <header class="header">
             <div class="header__content">
-                <button type="button" class="header__btn header__main-menu-btn">
+                <button type="button" class="header__btn">
                     <img src="/menu.618428ae.svg" alt="main menu">
                 </button>
                 <h1 class="header__title">To Do</h1>
@@ -35,5 +35,77 @@
                 </button>
             </div>
         </header>
+        <input id="navigation__toggle-input" name="toggle-input" type="checkbox">
+        <div class="navigation">
+            <label class="navigation__toggle-btn" for="navigation__toggle-input">
+                <img src="/blue-menu.882ffc71.svg" alt="menu toggle button">
+            </label>
+
+            <nav class="navigation__content">
+                <ul class="navigation__content__list">
+                    <li class="navigation__content__list__item">
+                        <img src="/sun.4888715a.svg" alt="today, work to do">
+                        <span class="navigation__content__list__item__text">오늘 할일</span>
+                    </li>
+                    <li class="navigation__content__list__item">
+                        <img src="/star.f32c17b9.svg" alt="important">
+                        <span class="navigation__content__list__item__text">중요</span>
+                    </li>
+                    <li class="navigation__content__list__item">
+                        <img src="/calendar.aa50c7b1.svg" alt="schedule">
+                        <span class="navigation__content__list__item__text">계획된 일정</span>
+                    </li>
+                    <li class="navigation__content__list__item">
+                        <img src="/person.808b621a.svg" alt="me">
+                        <span class="navigation__content__list__item__text">나에게 할당됨</span>
+                    </li>
+                    <li class="navigation__content__list__item">
+                        <img src="/home.abcad68e.svg" alt="todo">
+                        <span class="navigation__content__list__item__text">할 일</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="navigation__add-list">
+                <div class="navigation__add-list__inner">
+                    <button type="button">
+                        <img src="/plus.732f87cc.svg" alt="add list">
+                    </button>
+                    <input type="text" placeholder="새 목록">
+                    <button type="button">
+                        <img src="/add.df632988.svg" alt="create group">
+                    </button>
+                </div>
+            </div>
+            <nav class="navigation__context">
+                <ul class="navigation__context__list">
+                    <li class="navigation__context__list__item">
+                        <button type="button">
+                            <img src="/email.2cffbd5c.svg" alt="email">
+                        </button>
+                    </li>
+                    <li class="navigation__context__list__item">
+                        <button type="button">
+                            <img src="/calendar.aa50c7b1.svg" alt="schedule">
+                        </button>
+                    </li>
+                    <li class="navigation__context__list__item">
+                        <button type="button">
+                            <img src="/people.840d134f.svg" alt="people">
+                        </button>
+                    </li>
+                    <li class="navigation__context__list__item">
+                        <button type="button">
+                            <img src="/clip.00777c3d.svg" alt="files">
+                        </button>
+                    </li>
+                    <li class="navigation__context__list__item">
+                        <button type="button">
+                            <img src="/check.3f3ab62e.svg" alt="??">
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <main></main>
     </body>
 </html>
