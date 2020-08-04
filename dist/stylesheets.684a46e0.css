@@ -533,4 +533,119 @@ input {
   }
 }
 
+@media screen and (min-width: 767px) {
+  #navigation__toggle-input:checked ~ .todo {
+    margin-left: 290px;
+    width: calc(100vw - 290px);
+  }
+}
+
+.todo {
+  margin-left: 50px;
+  width: calc(100vw - 50px);
+  transition: width 0.12s ease;
+}
+.todo img {
+  width: 16px;
+  height: 16px;
+}
+.todo button {
+  padding: 8px;
+  border-radius: 3px;
+}
+.todo button:hover {
+  background-color: #ededed;
+}
+@media screen and (min-width: 767px) {
+  .todo {
+    margin-left: 50px;
+    width: calc(100vw - 50px);
+  }
+}
+
+.todo__header {
+  display: flex;
+  padding: 18px 24px 6px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo__header .todo__header__left {
+  display: flex;
+  align-items: center;
+}
+.todo__header .todo__header__left h3 {
+  font-size: 1.8rem;
+  margin-right: 10px;
+}
+.todo__header .todo__header__left .todo__header__menu-btn {
+  position: relative;
+}
+.todo__header .todo__header__left .todo__header__menu-btn:before, .todo__header .todo__header__left .todo__header__menu-btn:after {
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  z-index: 100;
+  box-shadow: 2px 2px 5px 0 rgba(178, 178, 178, 0.2);
+}
+.todo__header .todo__header__left .todo__header__menu-btn:hover:before {
+  content: "";
+  position: absolute;
+  opacity: 1;
+  background-color: #fff;
+  width: 16px;
+  height: 16px;
+  bottom: 117%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-bottom: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+.todo__header .todo__header__left .todo__header__menu-btn:hover:after {
+  content: "목록 옵션";
+  opacity: 1;
+  position: absolute;
+  width: 80px;
+  height: 36px;
+  padding: 9px 7px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.todo__header .todo__header__right {
+  display: flex;
+}
+.todo__header .todo__header__right img {
+  margin-right: 7px;
+}
+.todo__header .todo__header__right .todo__header__sort-btn {
+  margin: 0;
+}
+.todo__header .todo__header__right .todo__header__sort-btn img:first-child {
+  margin-right: -6px;
+}
+.todo__header .todo__header__right .todo__header__sort-btn img:last-child {
+  margin-left: -6px;
+}
+.todo__header button {
+  display: flex;
+  align-items: center;
+}
+
+.todo__date {
+  display: block;
+  color: #777;
+  padding: 0 24px;
+  font-size: 1.1rem;
+}
+
+.todo__add-input {
+  position: relative;
+}
+.todo__add-input button {
+  position: absolute;
+}
+
 /*# sourceMappingURL=/stylesheets.684a46e0.css.map */

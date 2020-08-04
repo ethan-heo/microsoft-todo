@@ -140,6 +140,39 @@
             </nav>
         </div>
 
-        <main></main>
+        <main class="todo">
+            <header class="todo__header">
+                <div class="todo__header__left">
+                    <h3 class="">오늘 할 일</h3>
+                    <button class="todo__header__menu-btn" type="button">
+                        <img src="./assets/svgs/menu-dot.svg" alt="menu" />
+                    </button>
+                </div>
+                <div class="todo__header__right">
+                    <button type="button">
+                        <img src="./assets/svgs/light.svg" alt="menu" />
+                        <span>
+                            오늘
+                        </span>
+                    </button>
+                    <button class="todo__header__sort-btn" type="button">
+                        <img src="./assets/svgs/arrow-up.svg" alt="menu" />
+                        <img src="./assets/svgs/arrow-down.svg" alt="menu" />
+                        <span>
+                            정렬
+                        </span>
+                    </button>
+                </div>
+            </header>
+            <time class="todo__date" datetime="2020-08-04"
+                >8월 4일, 화요일</time
+            >
+            <div class="todo__add-input">
+                <input type="text" />
+                <button type="button">
+                    <img src="./assets/svgs/plus-gray.svg" />
+                </button>
+            </div>
+        </main>
     </body>
 </html>

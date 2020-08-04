@@ -1,0 +1,96 @@
+#navigation__toggle-input:checked ~ .todo {
+    // margin-left: 50px;
+    // width: calc(100vw - 50px);
+
+    @media screen and (min-width: $mobile) {
+        margin-left: 290px;
+        width: calc(100vw - 290px);
+    }
+}
+
+.todo {
+    margin-left: 50px;
+    width: calc(100vw - 50px);
+    transition: width 0.12s ease;
+
+    img {
+        width: 16px;
+        height: 16px;
+    }
+
+    button {
+        padding: 8px;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: #ededed;
+        }
+    }
+
+    @media screen and (min-width: $mobile) {
+        margin-left: 50px;
+        width: calc(100vw - 50px);
+    }
+}
+
+.todo__header {
+    display: flex;
+    padding: 18px 24px 6px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+
+    .todo__header__left {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            font-size: 1.8rem;
+            margin-right: 10px;
+        }
+
+        .todo__header__menu-btn {
+            position: relative;
+            @include tooltip("top", "목록 옵션", 80px);
+        }
+    }
+
+    .todo__header__right {
+        display: flex;
+
+        img {
+            margin-right: 7px;
+        }
+
+        .todo__header__sort-btn {
+            margin: 0;
+
+            img:first-child {
+                margin-right: -6px;
+            }
+            img:last-child {
+                margin-left: -6px;
+            }
+        }
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.todo__date {
+    display: block;
+    color: #777;
+    padding: 0 24px;
+    font-size: 1.1rem;
+}
+
+.todo__add-input {
+    position: relative;
+
+    button {
+        position: absolute;
+    }
+}
