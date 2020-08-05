@@ -134,11 +134,103 @@
             </header>
             <time class="todo__date" datetime="2020-08-04">8월 4일, 화요일</time>
             <div class="todo__add-input">
-                <input type="text">
-                <button type="button">
+                <input id="add-input" type="text" placeholder="작업 추가">
+                <label for="add-input" class="add-input--inactive">
                     <img src="/plus-gray.b0473aec.svg">
-                </button>
+                </label>
+                <label for="add-input" class="add-input--active"></label>
             </div>
+            <ul class="todo__list--doing">
+                <li class="todo__list-item">
+                    <div class="todo__list-item__left">
+                        <button type="button" class="todo__list-item__check-btn">
+                            <img src="/check.3f3ab62e.svg" alt="check">
+                        </button>
+                        <div class="todo__list-item__content">
+                            <span>to do</span>
+                            <span>할 일</span>
+                        </div>
+                    </div>
+                    <button type="button" class="todo__list-item__favorite-btn">
+                        <img src="/star.f32c17b9.svg" alt="check">
+                    </button>
+                </li>
+                <li class="todo__list-item">
+                    <div class="todo__list-item__left">
+                        <button type="button" class="todo__list-item__check-btn">
+                            <img src="/check.3f3ab62e.svg" alt="check">
+                        </button>
+                        <div class="todo__list-item__content">
+                            <span>to do</span>
+                            <span>할 일</span>
+                        </div>
+                    </div>
+                    <button type="button" class="todo__list-item__favorite-btn">
+                        <img src="/star.f32c17b9.svg" alt="check">
+                    </button>
+                </li>
+                <li class="todo__list-item">
+                    <div class="todo__list-item__left">
+                        <button type="button" class="todo__list-item__check-btn">
+                            <img src="/check.3f3ab62e.svg" alt="check">
+                        </button>
+                        <div class="todo__list-item__content">
+                            <span>to do</span>
+                            <span>할 일</span>
+                        </div>
+                    </div>
+                    <button type="button" class="todo__list-item__favorite-btn">
+                        <img src="/star.f32c17b9.svg" alt="check">
+                    </button>
+                </li>
+            </ul>
+            <p class="todo__list-title--done">
+                완료됨
+            </p>
+            <ul class="todo__list--done">
+                <li class="todo__list-item done">
+                    <div class="todo__list-item__left">
+                        <button type="button" class="todo__list-item__check-btn">
+                            <img src="/check-white.ce403f71.svg" alt="check">
+                        </button>
+                        <div class="todo__list-item__content">
+                            <span>to do</span>
+                            <span>할 일</span>
+                        </div>
+                    </div>
+                    <button type="button" class="todo__list-item__favorite-btn">
+                        <img src="/star.f32c17b9.svg" alt="check">
+                    </button>
+                </li>
+                <li class="todo__list-item done">
+                    <div class="todo__list-item__left">
+                        <button type="button" class="todo__list-item__check-btn">
+                            <img src="/check-white.ce403f71.svg" alt="check">
+                        </button>
+                        <div class="todo__list-item__content">
+                            <span>to do</span>
+                            <span>할 일</span>
+                        </div>
+                    </div>
+                    <button type="button" class="todo__list-item__favorite-btn">
+                        <img src="/star.f32c17b9.svg" alt="check">
+                    </button>
+                </li>
+                <li class="todo__list-item done">
+                    <div class="todo__list-item__left">
+                        <button type="button" class="todo__list-item__check-btn">
+                            <img src="/check-white.ce403f71.svg" alt="check">
+                        </button>
+                        <div class="todo__list-item__content">
+                            <span>to do</span>
+                            <span>할 일</span>
+                        </div>
+                    </div>
+                    <button type="button" class="todo__list-item__favorite-btn">
+                        <img src="/star.f32c17b9.svg" alt="check">
+                    </button>
+                </li>
+            </ul>
         </main>
     </body>
 </html>

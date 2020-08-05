@@ -81,6 +81,7 @@
 }
 
 .todo__date {
+    margin-bottom: 20px;
     display: block;
     color: #777;
     padding: 0 24px;
@@ -88,9 +89,161 @@
 }
 
 .todo__add-input {
+    margin: 0 24px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    button {
+    input {
+        width: 100%;
+        padding: 16px 45px;
+        font-size: 1.5rem;
+        box-sizing: border-box;
+        border-bottom: 1px solid #e5e5e5;
+
+        &:focus {
+            border-bottom: 1px solid #767678;
+        }
+    }
+
+    input:focus ~ .add-input--inactive {
+        display: none;
+    }
+    input:focus ~ .add-input--active {
+        display: block;
+    }
+
+    .add-input--inactive,
+    .add-input--active {
         position: absolute;
+        display: flex;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .add-input--inactive {
+        width: 24px;
+        height: 24px;
+        padding: 4px;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: #ededed;
+        }
+    }
+
+    .add-input--active {
+        display: none;
+        width: 16px;
+        height: 16px;
+        margin-left: 7px;
+        border-radius: 50%;
+        border: 1px solid #767678;
+    }
+}
+
+.todo__list-title--done {
+    margin: 0 24px;
+    padding: 16px 0;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.todo__list-item {
+    margin: 0 24px;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ededed;
+
+    &:hover {
+        background-color: #ededed;
+    }
+
+    .todo__list-item__check-btn {
+        position: relative;
+        display: flex;
+        margin-left: 8px;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+        border: 1px solid $dark-blue;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+        transition: opacity 0.12s ease-in-out;
+
+        @include tooltip("top", "완료됨으로 표시");
+
+        img {
+            opacity: 0;
+            width: 10px;
+            height: 10px;
+        }
+
+        &:hover {
+            background-color: #fff;
+
+            img {
+                opacity: 1;
+            }
+        }
+    }
+
+    .todo__list-item__left {
+        display: flex;
+        align-items: center;
+
+        .todo__list-item__content {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+
+            font-size: 1.5rem;
+
+            span + span {
+                margin-top: 10px;
+            }
+
+            span:last-child {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .todo__list-item__favorite-btn {
+        position: relative;
+        cursor: pointer;
+        @include tooltip("left", "작업을 중요로 표시합니다", 180px);
+    }
+
+    &.done {
+        .todo__list-item__check-btn {
+            background-color: $dark-blue;
+
+            @include tooltip("top", "완료되지 않음으로 표시", 160px);
+
+            img {
+                opacity: 1;
+            }
+
+            &:hover {
+                background-color: $dark-blue;
+            }
+        }
+
+        .todo__list-item__left {
+            .todo__list-item__content {
+                span:first-child {
+                    text-decoration: line-through;
+                }
+            }
+        }
     }
 }
